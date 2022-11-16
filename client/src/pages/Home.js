@@ -3,7 +3,7 @@ import axios from "axios";
 import Layout from "../components/Layout";
 import { Col, Row } from "antd";
 import Doctor from "../components/Doctor";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { showLoading, hideLoading } from "../redux/alertsSlice";
 function Home() {
   const [doctors, setDoctors] = useState([]);
@@ -24,7 +24,6 @@ function Home() {
       dispatch(hideLoading())
     }
   };
-
   useEffect(() => {
     getData();
   }, []);

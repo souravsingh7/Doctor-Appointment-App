@@ -43,11 +43,7 @@ function Layout({children}) {
                         path: "/admin/doctorslist",
                         icon: "ri-user-star-line",
                       },
-                      {
-                        name: "Profile",
-                        path: "/profile",
-                        icon: "ri-user-line",
-                      },        
+                            
                 ];
                 //doctor menu
                 const doctorMenu = [
