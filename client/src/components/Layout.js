@@ -81,14 +81,14 @@ function Layout({children}) {
               <h2 className='logo'>
                 {!collapsed ? "DoctorHome": <i className="ri-hospital-fill menu-item2">DH</i>}
                 </h2>
-                <h1 className="role">{role}</h1>
+                <h1 className="role" key={role}>{role}</h1>
              </div>
             <div className="menu">
           {menuTobeRendered.map((menu)=>{
           const isActive=location.pathname===menu.path
           return <div className={`d-flex menu-item ${isActive&& 'active-menu-item'}`}>
-               <i className={menu.icon}></i>
-               {!collapsed && <Link to={menu.path} key="{menu.name}">{menu.name}</Link> }
+               <i className={menu.icon} key={menu.icon}></i>
+               {!collapsed && <Link to={menu.path} key={menu.name}>{menu.name}</Link> }
                       </div>      
             })}; 
             <div className={`d-flex menu-item  mt-2`} onClick={()=>{
@@ -96,7 +96,7 @@ function Layout({children}) {
               Navigate('/login')
             }}>
                <i className='ri-logout-circle-line ' ></i>
-               {!collapsed && <Link to='/login' key="Logout">Logout</Link> }
+               {!collapsed && <Link to='/login' >Logout</Link> }
          </div> 
      </div>
  </div>
