@@ -1,6 +1,7 @@
+import React from "react";
 import { Button, Col, Form, Input, Row, TimePicker } from "antd";
 import moment from "moment";
-import React from "react";
+
 
 function DoctorForm({ onFinish, initivalValues }) {
   return (
