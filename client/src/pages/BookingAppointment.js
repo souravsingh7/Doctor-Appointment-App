@@ -21,8 +21,7 @@ function BookAppointment() {
   const getDoctorData = async () => {
     try {
       dispatch(showLoading());
-      const response = await axios.post(
-        "/api/doctor/get-doctor-info-by-id",
+      const response = await axios.post( "/api/doctor/get-doctor-info-by-id",
         {
           doctorId: params.doctorId,
         },
