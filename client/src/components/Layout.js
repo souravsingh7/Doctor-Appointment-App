@@ -115,8 +115,11 @@ function Layout({children}) {
                 onClick={() => navigate("/notifications")}
               >
                 <i className="ri-notification-line header-action-icon px-3"></i>
-              </Badge>                    
-              {user?.isDoctor ?<Link className='anchor mx-2' to={`/doctor/profile/${user?._id}`}>{user?.name}</Link>: <Link className='anchor mx-2'  >{user?.name}</Link>}
+              </Badge>            
+            
+                <Link className='anchor mx-2' >{user?.name}</Link>
+                 
+              
   </div>
  </div>
                             <div className="body">
