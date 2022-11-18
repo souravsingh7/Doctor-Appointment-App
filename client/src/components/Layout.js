@@ -116,7 +116,7 @@ function Layout({children}) {
               >
                 <i className="ri-notification-line header-action-icon px-3"></i>
               </Badge>                    
-              <Link className='anchor mx-2' to={menu.path}>{user?.name}</Link>
+              {user?.isDoctor ?<Link className='anchor mx-2' to={`/doctor/profile/${user?._id}`}>{user?.name}</Link>: <Link className='anchor mx-2'  >{user?.name}</Link>}
   </div>
  </div>
                             <div className="body">
