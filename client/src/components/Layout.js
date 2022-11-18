@@ -92,7 +92,7 @@ function Layout({children}) {
               Navigate('/login')
             }}>
                <i className='ri-logout-circle-line ' ></i>
-               {!collapsed && <Link to='/login' >Logout</Link> }
+               {!collapsed && <Link to='/login'  onClick={() => window.location.reload(false)}>Logout</Link> }
          </div> 
      </div>
  </div>
